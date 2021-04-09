@@ -1,0 +1,14 @@
+h4 {
+  padding: 1rem 1rem;
+  color: #fff;
+  border-radius: 3px;
+  background-image: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#ef79a9),
+    to(#9374b1)
+  );
+  background-image: -webkit-linear-gradient(right, #9374b1 0%, #ef79a9 100%);
+  background-image: linear-gradient(to left, #9374b1 0%, #ef79a9 100%);
+}
