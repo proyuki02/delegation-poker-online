@@ -8,7 +8,7 @@
 ## Setup with template
 
 - .env
-- firebaserc
+- .firebaserc
 - firestore.rules
 
 ## Start
