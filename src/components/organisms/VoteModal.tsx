@@ -74,6 +74,7 @@ export function VoteModal() {
           {room.players.map((player) => (
             <Player player={player} />
           ))}
+          <Margin height={10} />
         </Modal.Body>
         <Modal.Footer>
           <Button

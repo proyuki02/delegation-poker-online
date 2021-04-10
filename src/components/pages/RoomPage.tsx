@@ -11,7 +11,7 @@ import { NotFoundPage } from "./NotFoundPage";
 import LoadingOverlay from "react-loading-overlay";
 import { VoteModal } from "../organisms/VoteModal";
 import { ReportModal } from "../organisms/ReportModal";
-import { PeopleFill, ClipboardCheck } from "react-bootstrap-icons";
+import { People, ClipboardCheck } from "react-bootstrap-icons";
 
 export function RoomPage() {
   const room = useContext(RoomContext);
@@ -39,14 +39,14 @@ export function RoomPage() {
         <Margin height={20} />
         <div>
           <h4>
-            <PeopleFill />
+            <People />
             <span style={{ marginLeft: 8 }}>Player</span>
           </h4>
           <PlayerList />
           <InviteModal />
           <VoteModal />
         </div>
-        <Margin height={40} />
+        <Margin height={80} />
         <div>
           <h4>
             <ClipboardCheck />
@@ -55,7 +55,7 @@ export function RoomPage() {
           <DelegationBoard />
           <ReportModal />
         </div>
-        <Margin height={40} />
+        <Margin height={80} />
         <Help />
       </Container>
     </LoadingOverlay>

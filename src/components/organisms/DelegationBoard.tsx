@@ -37,7 +37,7 @@ function Td(props: { topic: ITopic; level: string }) {
           disabled={!playing}
         />
       </div>
-      <div style={{ fontSize: 12, marginTop: 4 }}>
+      <div style={{ fontSize: 14, marginTop: 4 }}>
         {votePlayers.map((v) => (
           <div>
             <Badge pill variant="info">

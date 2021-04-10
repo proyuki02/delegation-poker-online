@@ -8,7 +8,7 @@ export function PlayerList() {
 
   return (
     <>
-      <div style={{ fontSize: 20, marginBottom: 10 }}>
+      <div style={{ fontSize: 22, marginBottom: 10 }}>
         {room.players.map((player) => (
           <Badge pill variant="info" style={{ marginRight: 4 }}>
             {player.name}

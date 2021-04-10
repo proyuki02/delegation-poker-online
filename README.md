@@ -1,13 +1,14 @@
 # delegation-poker-online
 
-## Required
+## Require
 
 - Firebase Authentication
 - Firestore Database
 
-## Setup
+## Setup with template
 
 - .env
+- firebaserc
 - firestore.rules
 
 ## Start

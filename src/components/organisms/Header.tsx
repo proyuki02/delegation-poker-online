@@ -31,7 +31,7 @@ export function Header() {
   return (
     <Navbar bg="dark" variant="dark">
       <img
-        src="/logo.png"
+        src="/image/logo.png"
         width="30"
         height="30"
         className="d-inline-block align-top"
