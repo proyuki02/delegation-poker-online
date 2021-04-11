@@ -1,6 +1,6 @@
 # Delegation Poker Online
 
-A program for playing the delegation poker online.
+A program for playing the delegation poker online.  
 Powered by Firebase. Japanese version only.
 
 ![Delegation Poker Online](https://user-images.githubusercontent.com/40527123/114299393-c6ecba00-9af5-11eb-8491-a9e4ced1c72b.png)
