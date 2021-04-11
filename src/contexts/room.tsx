@@ -81,7 +81,7 @@ function RoomProvider(props: { children: React.ReactNode }) {
     doc.onSnapshot((room) => {
       // delete room handler
       if (room.data() === undefined) {
-        window.location.href = "/";
+        setTimeout(() => (window.location.href = "/"), 500);
       }
     });
 
@@ -262,7 +262,12 @@ function RoomProvider(props: { children: React.ReactNode }) {
 
   const deleteRoom = async () => {
     const roomRef = getRoomRef();
-    await roomRef.delete();
+    const batch = fb.db.batch();
+    players.map((v) => batch.delete(roomRef.collection("players").doc(v.id)));
+    topics.map((v) => batch.delete(roomRef.collection("topics").doc(v.id)));
+    votes.map((v) => batch.delete(roomRef.collection("votes").doc(v.id)));
+    batch.delete(roomRef);
+    await batch.commit();
   };
 
   return (

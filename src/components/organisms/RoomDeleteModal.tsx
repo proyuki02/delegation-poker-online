@@ -35,8 +35,8 @@ export function RoomDeleteModal() {
         <Modal.Footer>
           <Button
             variant="danger"
-            onClick={() => {
-              room.deleteRoom();
+            onClick={async () => {
+              await room.deleteRoom();
               handleClose();
             }}
           >
