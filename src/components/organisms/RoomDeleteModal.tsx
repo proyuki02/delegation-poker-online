@@ -43,7 +43,7 @@ export function RoomDeleteModal() {
             削除
           </Button>
           <Button variant="link" onClick={handleClose}>
-            閉じる
+            キャンセル
           </Button>
         </Modal.Footer>
       </Modal>
