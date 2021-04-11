@@ -12,6 +12,7 @@ import LoadingOverlay from "react-loading-overlay";
 import { VoteModal } from "../organisms/VoteModal";
 import { ReportModal } from "../organisms/ReportModal";
 import { People, ClipboardCheck } from "react-bootstrap-icons";
+import { RoomDeleteModal } from "../organisms/RoomDeleteModal";
 
 export function RoomPage() {
   const room = useContext(RoomContext);
@@ -54,6 +55,7 @@ export function RoomPage() {
           </h4>
           <DelegationBoard />
           <ReportModal />
+          <RoomDeleteModal />
         </div>
         <Margin height={80} />
         <Help />

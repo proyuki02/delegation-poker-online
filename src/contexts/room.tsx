@@ -41,6 +41,7 @@ interface IRoomContext {
   votes: Array<IVote>;
   vote: (level: string) => Promise<void>;
   myVote: () => string;
+  deleteRoom: () => Promise<void>;
 }
 const RoomContext = createContext({} as IRoomContext);
 
@@ -75,6 +76,14 @@ function RoomProvider(props: { children: React.ReactNode }) {
 
     // room exist
     setRoomExist("true");
+
+    // room handler
+    doc.onSnapshot((room) => {
+      // delete room handler
+      if (room.data() === undefined) {
+        window.location.href = "/";
+      }
+    });
 
     // players handler
     doc.collection("players").onSnapshot((players) => {
@@ -251,6 +260,11 @@ function RoomProvider(props: { children: React.ReactNode }) {
     return players.some((p) => p.id === fb?.user?.uid);
   };
 
+  const deleteRoom = async () => {
+    const roomRef = getRoomRef();
+    await roomRef.delete();
+  };
+
   return (
     <RoomContext.Provider
       value={{
@@ -271,6 +285,7 @@ function RoomProvider(props: { children: React.ReactNode }) {
         vote,
         votes,
         myVote,
+        deleteRoom,
       }}
     >
       {props.children}
