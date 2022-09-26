@@ -3,7 +3,7 @@
 A program for playing the delegation poker online.  
 Powered by Firebase. Japanese version only.
 
-![Delegation Poker Online](https://user-images.githubusercontent.com/40527123/114299393-c6ecba00-9af5-11eb-8491-a9e4ced1c72b.png)
+![Delegation Poker Online](https://user-images.githubusercontent.com/40527123/192187572-97de38a2-db55-4638-bfd4-f08ea488957c.png)
 
 ## Demo Site
 
